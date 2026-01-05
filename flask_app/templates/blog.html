@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog - Viraj Ghadge{% endblock %}
+
+{% block content %}
+<section class="blog-section">
+    <div class="container">
+        <h1 class="page-title">My Blog</h1>
+        <p class="page-subtitle">Thoughts on development, AI, and technology</p>
+
+        <div class="blog-posts">
+            {% for post in blog_posts %}
+            <article class="blog-post">
+                <div class="blog-header">
+                    <h2 class="blog-title">{{ post.title }}</h2>
+                    <p class="blog-excerpt">{{ post.excerpt }}</p>
+                </div>
+
+                <div class="blog-content">
+                    {% for paragraph in post.content.split('\n\n') %}
+                    <p>{{ paragraph }}</p>
+                    {% endfor %}
+                </div>
+
+                <div class="blog-footer">
+                    <span class="read-time">~5 min read</span>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        <div class="blog-cta">
+            <h3>Have a question or want to discuss?</h3>
+            <a href="mailto:virajghadge1999@gmail.com" class="btn btn-primary">Drop me an email</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

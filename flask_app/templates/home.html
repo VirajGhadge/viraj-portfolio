@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Viraj Ghadge{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Viraj Ghadge</span>
+                </h1>
+                <p class="hero-subtitle">Full-Stack Developer | AI Enthusiast | Problem Solver</p>
+                <p class="hero-description">
+                    I craft elegant solutions to complex problems using Python, web technologies, and artificial intelligence. 
+                    With expertise in full-stack development and a passion for innovation, I build applications that matter.
+                </p>
+                <div class="hero-cta">
+                    <a href="/projects" class="btn btn-primary">View My Work</a>
+                    <a href="mailto:virajghadge1999@gmail.com" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section class="education-section">
+    <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="education-grid">
+            <div class="education-card">
+                <div class="education-icon">🎓</div>
+                <h3>Master of Computer Applications (MCA)</h3>
+                <p class="education-institution">JSPM's College of Engineering, Hadapsar</p>
+                <p class="education-details">Advanced study in application development, database design, and software architecture</p>
+            </div>
+            <div class="education-card">
+                <div class="education-icon">📚</div>
+                <h3>Bachelor of Computer Applications (BCA)</h3>
+                <p class="education-institution">Shivaji University, Kolhapur</p>
+                <p class="education-details">Foundational knowledge in programming, web development, and computer science fundamentals</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Skills Section -->
+<section class="skills-section">
+    <div class="container">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Backend Development</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">Django</span>
+                    <span class="skill-tag">REST APIs</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Frontend Development</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Responsive Design</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>AI & Data</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">NLP</span>
+                    <span class="skill-tag">Voice Processing</span>
+                    <span class="skill-tag">Transformers</span>
+                    <span class="skill-tag">Data Analysis</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Databases</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">SQLite3</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Database Design</span>
+                    <span class="skill-tag">ACID Compliance</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Projects Preview -->
+<section class="featured-section">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">A glimpse into my recent work</p>
+        <div class="featured-grid">
+            <div class="featured-card">
+                <div class="featured-header">
+                    <h3>AURA</h3>
+                    <span class="status-badge in-dev">In Development</span>
+                </div>
+                <p class="featured-description">AI Personal Voice Assistant with NLP capabilities</p>
+                <div class="featured-tech">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">AI</span>
+                    <span class="tech-badge">Voice</span>
+                </div>
+            </div>
+            <div class="featured-card">
+                <div class="featured-header">
+                    <h3>Performance Tracker</h3>
+                    <span class="status-badge in-dev">In Development</span>
+                </div>
+                <p class="featured-description">Full-stack student performance tracking system</p>
+                <div class="featured-tech">
+                    <span class="tech-badge">Flask</span>
+                    <span class="tech-badge">SQLite</span>
+                    <span class="tech-badge">Full-Stack</span>
+                </div>
+            </div>
+        </div>
+        <div class="view-all">
+            <a href="/projects" class="btn btn-primary">View All Projects →</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

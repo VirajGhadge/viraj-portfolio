@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects - Viraj Ghadge{% endblock %}
+
+{% block content %}
+<section class="projects-section">
+    <div class="container">
+        <h1 class="page-title">My Projects</h1>
+        <p class="page-subtitle">A collection of my professional and personal projects</p>
+
+        <div class="projects-grid">
+            {% for project in projects %}
+            <div class="project-card">
+                <div class="project-header">
+                    <h2 class="project-title">{{ project.name }}</h2>
+                    <span class="status-badge {% if project.status == 'In-Development' %}in-dev{% else %}completed{% endif %}">
+                        {{ project.status }}
+                    </span>
+                </div>
+
+                <p class="project-description">{{ project.description }}</p>
+
+                <div class="technologies">
+                    <h4>Technologies Used</h4>
+                    <div class="tech-list">
+                        {% for tech in project.technologies %}
+                        <span class="tech-badge">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="project-footer">
+                    {% if project.github %}
+                    <a href="{{ project.github }}" target="_blank" class="project-link">
+                        View on GitHub →
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
